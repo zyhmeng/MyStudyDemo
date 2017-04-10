@@ -222,5 +222,104 @@ for item in names{
 // 数组的合并
 let array9 = array2 + array1
 
+// 字典
+let dict: Dictionary<String, AnyObject> = ["name" : "zyh" as AnyObject]
+
+var dict2 : [String : AnyObject] = ["name" : "zyh" as AnyObject, "age" : 18 as AnyObject]
+
+let dict3 = ["name":"zyh"]
+
+// 可变字典
+var dict4 = ["name":"zyh"]
+
+var dict5 = [String : AnyObject]()
+
+// 添加元素
+dict5["name"] = "zyh" as AnyObject
+dict5["age"] = 12 as AnyObject
+
+// 删除元素
+
+dict5.removeValue(forKey: "name")
+//dict5.removeAll()
+
+// 修改元素
+dict5["name"] = "qwer" as AnyObject
+
+
+// 取出
+dict5["name"]
+
+// 遍历字典
+for key in dict5.keys{
+    
+    print(key)
+}
+
+for value in dict5.values{
+    
+    print(value)
+}
+
+for (key , value) in dict5{
+    
+    dict2[key] = value
+}
+
+// 元组
+let abcd = ("zyh",18,1.98)
+
+let qwera = (name:"zyh",age : 18, height : 1.88)
+
+// 元组的使用
+let error = (404, "NOT found")
+
+error.0
+error.1
+
+let error1 = (errorCode : 404 , errorInfo : "not found")
+error1.errorCode
+error1.errorInfo
+
+let (errorC , errorI) = (404 , "not found")
+errorC
+errorI
+
+
+// 可选类型
+var name1 : String? = nil
+
+name1 = "zyh"
+
+print(name1!)
+
+var phoneNum : String! = nil
+
+phoneNum = "+86 110"
+
+// 使用注意：如果一个可选类型中没有值，强制解包会报错
+// 在强制解包之前，最好对可选类型进行判断，如果有值，在进行解包
+if phoneNum != nil {
+
+    let phoneInfo = "my phoneNum is " + phoneNum!
+}
+
+// 可选绑定
+if let tempPhoneNum = phoneNum {
+    tempPhoneNum
+}
+
+// 可选类型的使用
+let urlString = "http:www.520it.com"
+
+let url : NSURL? = URL(string: urlString)
+
+if url != nil {
+    
+    NSURLRequest(url: url!)
+}
+
+
+
 
 
