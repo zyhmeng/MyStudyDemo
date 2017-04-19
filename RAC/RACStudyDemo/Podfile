@@ -1,0 +1,4 @@
+use_frameworks!
+target "RACStudyDemo" do
+pod 'ReactiveCocoa', '~> 2.5.0’
+end
