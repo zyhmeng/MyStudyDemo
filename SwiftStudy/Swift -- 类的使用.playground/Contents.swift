@@ -61,7 +61,7 @@ let p = Person()
 p.name = "zyh"
 p.age = 18
 
-
+p.age = 20
 
 
 
