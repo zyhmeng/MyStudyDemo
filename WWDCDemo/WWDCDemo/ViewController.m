@@ -29,9 +29,10 @@
     label.text = dateStr;
     label.textColor = [UIColor blackColor];
     
-    
     self.label = label;
     [self.view addSubview:label];
+    
+
 }
 
 - (void)viewWillAppear:(BOOL)animated

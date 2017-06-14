@@ -20,6 +20,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    UIWindow *window = [UIWindow appearance];
+    
+    UIImage
     _VC = [[ViewController alloc] init];
     UIApplication *app = [UIApplication sharedApplication];
     
@@ -64,6 +67,7 @@
 
 - (void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 {
+    
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     
     [formatter setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
